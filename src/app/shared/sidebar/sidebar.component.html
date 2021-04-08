@@ -4,9 +4,11 @@
       App Gits
     </h3>
     <hr class="text-white">
-    <div class="list-group list-reset">
-      <a href="#" class="list-group-item list-group-item-action ">
-        DashBoard
+    <div class="list-group list-reset ">
+      <a href="#" 
+      class="list-group-item list-group-item-action " 
+      *ngFor="let history of history">
+        {{history}}
       </a>
     </div>
   </div>
