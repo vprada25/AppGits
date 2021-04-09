@@ -13,12 +13,16 @@ export class SearchComponent {
   txtSearch!: ElementRef<HTMLInputElement>;
 
   constructor(private gifservice: GifsService) {
-    
+
   }
 
   search() {
 
     const value = this.txtSearch.nativeElement.value;
+    if (value.trim().length === 0) {
+      return
+    }
+
     this.gifservice.searchGifs(value);
     this.txtSearch.nativeElement.value = "";
 
