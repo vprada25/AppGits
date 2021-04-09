@@ -10,13 +10,15 @@ import { GifsService } from 'src/app/gifs/service/gifs.service';
 })
 export class SidebarComponent {
 
-
-
   constructor(private gifsService: GifsService) { }
 
   get history() {
     return this.gifsService.history
 
+  }
+
+  search(arg: string) {
+    this.gifsService.searchGifs(arg)
   }
 
 }
